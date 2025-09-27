@@ -415,18 +415,36 @@ input[type="checkbox"]{
 
 
 /*----Footer---*/
-footer{
-	background-color: #333;
-	padding: 50px;
-	font-size: 80%;
+footer {
+  background-color: #333; /* keep your original */
+  padding: 40px 20px;
+  font-size: 85%;
 }
-.footer-nav{
-	list-style: none;
-	display: flex;
+/* Arrange footer content */
+footer .row {
+  display: flex;
+  flex-direction: column; /* stack items */
+  align-items: flex-start; /* all left aligned */
+  gap: 20px;
 }
-.social-links{
-	list-style: none;
-	float: right;
+
+/* Footer navigation (links row) */
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* wrap to new line if needed */
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+/* Social icons row (below links) */
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 .footer-nav li,
 .social-links li{
@@ -481,9 +499,59 @@ transform: scale(0.98);
 .in:hover{
    color: #0a66c2;
 }
-footer p{
-	color: #888;
-	text-align: center;
-	margin-top: 20px;
+/* Copyright */
+footer p {
+  margin: 0;
+  font-size: 60rem; /* smaller text */
+  text-align: left;
+}
+
+
+
+
+.contact-form {
+  width: 70%; /* wider on desktop */
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    width: 100%; /* full width on mobile */
+  }
+}
+
+
+footer .row {
+  display: flex;
+  flex-direction: column;  /* stack everything vertically */
+  align-items: flex-start; /* align to left */
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;  /* row of icons */
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-size: 70%;  /* smaller copyright text */
+  margin-top: 10px;
+  color: #888;
+}
+
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* stops sideways scrolling */
 }
 
